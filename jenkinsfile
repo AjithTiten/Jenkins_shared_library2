@@ -1,4 +1,4 @@
-@Library('Jenkins_shared_library') _
+@Library('Jenkins_shared_library2') _
 def COLOR_MAP = [
     'FAILURE' : 'danger',
     'SUCCESS' : 'good'
@@ -25,7 +25,7 @@ pipeline{
         }
         stage('checkout from Git'){
             steps{
-                checkoutGit('https://github.com/Aj7Ay/Youtube-clone-app.git', 'main')
+                checkoutGit('git branch: 'main', url: 'https://github.com/AjithTiten/Jenkins_shared_library2.git'', 'main')
             }
         }
         stage('sonarqube Analysis'){
